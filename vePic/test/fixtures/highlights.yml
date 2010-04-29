@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  body: MyText
+  x: 1
+  y: 1
+  h: 1
+  w: 1
+  slide_id: 1
+
+two:
+  body: MyText
+  x: 1
+  y: 1
+  h: 1
+  w: 1
+  slide_id: 1

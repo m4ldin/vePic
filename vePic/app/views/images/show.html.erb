@@ -1,0 +1,23 @@
+<p>
+  <b>Slide:</b>
+  <%=h @image.slide_id %>
+</p>
+
+<p>
+  <b>Path:</b>
+  <%=h @image.path %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @image.title %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%=h @image.author %>
+</p>
+
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

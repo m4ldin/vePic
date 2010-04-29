@@ -1,0 +1,3290 @@
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTopics (20100419103042)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100419103042')[0m
+Migrating to CreatePosts (20100419103153)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100419103153')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("topics")[0m
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:21:59) [GET]
+  [4;36;1mTopic Load (0.6ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 88ms (View: 84, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-04-20 14:22:20) [GET]
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:22:24) [GET]
+  [4;36;1mTopic Load (0.3ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:23:31) [GET]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `validates_presene_of' for #<Class:0x1043333a8>):
+  app/models/topic.rb:2
+  app/controllers/topics_controller.rb:5:in `index'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.0ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:23:51) [GET]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `validates_presene_of' for #<Class:0x1044aaa38>):
+  app/models/topic.rb:2
+  app/controllers/topics_controller.rb:5:in `index'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:24:21) [GET]
+  [4;35;1mTopic Load (0.4ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-04-20 14:24:22) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-04-20 14:24:30) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "topic"=>{"body"=>"Hej!", "title"=>"Saker"}}
+  [4;36;1mTopic Create (0.5ms)[0m   [0;1mINSERT INTO "topics" ("created_at", "title", "body", "updated_at") VALUES('2010-04-20 12:24:30', 'Saker', 'Hej!', '2010-04-20 12:24:30')[0m
+Redirected to http://localhost:3000/topics/1
+Completed in 9ms (DB: 1) | 302 Found [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 14:24:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 72ms (View: 68, DB: 0) | 200 OK [http://localhost/topics/1]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 14:24:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/topics/1]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:24:55) [GET]
+  [4;35;1mTopic Load (0.4ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:24:57) [GET]
+  [4;36;1mTopic Load (0.4ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#edit (for 127.0.0.1 at 2010-04-20 14:25:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/edit
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/topics/1/edit]
+
+
+Processing TopicsController#update (for 127.0.0.1 at 2010-04-20 14:25:19) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "topic"=>{"body"=>"Hej!", "title"=>""}, "id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/edit
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/topics/1]
+
+
+Processing TopicsController#update (for 127.0.0.1 at 2010-04-20 14:25:32) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "topic"=>{"body"=>"Lite innehåll", "title"=>"En topic"}, "id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+  [4;36;1mTopic Update (0.3ms)[0m   [0;1mUPDATE "topics" SET "updated_at" = '2010-04-20 12:25:32', "title" = 'En topic', "body" = 'Lite innehåll' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/topics/1
+Completed in 9ms (DB: 1) | 302 Found [http://localhost/topics/1]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 14:25:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/topics/1]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 14:34:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/topics/1]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 14:37:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+
+ActionView::TemplateError (Missing template topics/_topic.erb in view path app/views) on line #1 of app/views/topics/show.html.erb:
+1: <% render :partial => @topic %>
+2: 
+3: <p>
+4: <%= link_to 'Edit', edit_topic_path(@topic) %> | 
+
+    app/views/topics/show.html.erb:1
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:39:54) [GET]
+  [4;36;1mTopic Load (0.4ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-04-20 14:39:56) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-04-20 14:40:06) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "topic"=>{"body"=>"", "title"=>"Hej"}}
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-04-20 14:40:13) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "topic"=>{"body"=>"Lite text", "title"=>"Hej"}}
+  [4;35;1mTopic Create (0.4ms)[0m   [0mINSERT INTO "topics" ("created_at", "title", "body", "updated_at") VALUES('2010-04-20 12:40:13', 'Hej', 'Lite text', '2010-04-20 12:40:13')[0m
+Redirected to http://localhost:3000/topics/2
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 14:40:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+
+ActionView::TemplateError (Missing template topics/_topic.erb in view path app/views) on line #1 of app/views/topics/show.html.erb:
+1: <% render :partial => @topic %>
+2: 
+3: <p>
+4: <%= link_to 'Edit', edit_topic_path(@topic) %> | 
+
+    app/views/topics/show.html.erb:1
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (103.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 14:41:16) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+
+ActionView::TemplateError (Missing template topics/_topic.erb in view path app/views) on line #1 of app/views/topics/show.html.erb:
+1: <% render :partial => @topic %>
+2: 
+3: <p>
+4: <%= link_to 'Edit', edit_topic_path(@topic) %> | 
+
+    app/views/topics/show.html.erb:1
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:41:20) [GET]
+  [4;36;1mTopic Load (0.5ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+
+ActionView::TemplateError (Missing template topics/_topic.erb in view path app/views) on line #3 of app/views/topics/index.html.erb:
+1: <h1>Listing topics</h1>
+2: 
+3: <% render :partial => @topics %>
+4: 
+5: <%= link_to 'New topic', new_topic_path %>
+
+    app/views/topics/index.html.erb:3
+    app/controllers/topics_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:41:47) [GET]
+  [4;35;1mTopic Load (0.5ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+
+ActionView::TemplateError (Missing template topics/_topic.erb in view path app/views) on line #3 of app/views/topics/index.html.erb:
+1: <h1>Listing topics</h1>
+2: 
+3: <% render :partial => @topics %>
+4: 
+5: <%= link_to 'New topic', new_topic_path %>
+
+    app/views/topics/index.html.erb:3
+    app/controllers/topics_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-04-20 14:41:51) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "topic"=>{"body"=>"Lite text", "title"=>"Hej"}}
+  [4;36;1mTopic Create (0.3ms)[0m   [0;1mINSERT INTO "topics" ("created_at", "title", "body", "updated_at") VALUES('2010-04-20 12:41:51', 'Hej', 'Lite text', '2010-04-20 12:41:51')[0m
+Redirected to http://localhost:3000/topics/3
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 14:41:51) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 3) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+
+ActionView::TemplateError (Missing template topics/_topic.erb in view path app/views) on line #1 of app/views/topics/show.html.erb:
+1: <% render :partial => @topic %>
+2: 
+3: <p>
+4: <%= link_to 'Edit', edit_topic_path(@topic) %> | 
+
+    app/views/topics/show.html.erb:1
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 14:42:10) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 3) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/topics/3]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:42:14) [GET]
+  [4;35;1mTopic Load (0.5ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+
+ActionView::TemplateError (Missing template topics/_topic.erb in view path app/views) on line #3 of app/views/topics/index.html.erb:
+1: <h1>Listing topics</h1>
+2: 
+3: <% render :partial => @topics %>
+4: 
+5: <%= link_to 'New topic', new_topic_path %>
+
+    app/views/topics/index.html.erb:3
+    app/controllers/topics_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:42:17) [GET]
+  [4;36;1mTopic Load (0.6ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+
+ActionView::TemplateError (Missing template topics/_topic.erb in view path app/views) on line #3 of app/views/topics/index.html.erb:
+1: <h1>Listing topics</h1>
+2: 
+3: <% render :partial => @topics %>
+4: 
+5: <%= link_to 'New topic', new_topic_path %>
+
+    app/views/topics/index.html.erb:3
+    app/controllers/topics_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (106.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:42:27) [GET]
+  [4;35;1mTopic Load (0.6ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+
+ActionView::TemplateError (Missing template topics/_topic.erb in view path app/views) on line #3 of app/views/topics/index.html.erb:
+1: <h1>Listing topics</h1>
+2: 
+3: <% render :partial => @topics %>
+4: 
+5: <%= link_to 'New topic', new_topic_path %>
+
+    app/views/topics/index.html.erb:3
+    app/controllers/topics_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:42:56) [GET]
+  [4;36;1mTopic Load (0.5ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.9ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-04-20 14:42:59) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-04-20 14:43:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "topic"=>{"body"=>"Lite text", "title"=>"Ett ämne"}}
+  [4;35;1mTopic Create (0.3ms)[0m   [0mINSERT INTO "topics" ("created_at", "title", "body", "updated_at") VALUES('2010-04-20 12:43:12', 'Ett ämne', 'Lite text', '2010-04-20 12:43:12')[0m
+Redirected to http://localhost:3000/topics/4
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 14:43:12) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 4) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.7ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/topics/4]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:43:19) [GET]
+  [4;35;1mTopic Load (0.6ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.4ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-04-20 14:43:24) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:43:27) [GET]
+  [4;36;1mTopic Load (0.6ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.3ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:46:47) [GET]
+  [4;35;1mTopic Load (0.6ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (60.6ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Completed in 69ms (View: 65, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:49:18) [GET]
+  [4;36;1mTopic Load (0.6ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (3.2ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:49:26) [GET]
+  [4;35;1mTopic Load (0.6ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.8ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:51:06) [GET]
+  [4;36;1mTopic Load (0.6ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.3ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:53:40) [GET]
+  [4;35;1mTopic Load (0.6ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.6ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 14:53:43) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.8ms)
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/topics/2]
+
+
+Processing TopicsController#destroy (for 127.0.0.1 at 2010-04-20 14:53:46) [DELETE]
+  Parameters: {"authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "id"=>"2"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+  [4;36;1mTopic Destroy (0.3ms)[0m   [0;1mDELETE FROM "topics" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/topics
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/topics/2]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:53:46) [GET]
+  [4;35;1mTopic Load (0.6ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.3ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 14:53:48) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 3) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/topics/3]
+
+
+Processing TopicsController#destroy (for 127.0.0.1 at 2010-04-20 14:53:51) [DELETE]
+  Parameters: {"authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "id"=>"3"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 3) [0m
+  [4;36;1mTopic Destroy (0.2ms)[0m   [0;1mDELETE FROM "topics" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/topics
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/topics/3]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:53:51) [GET]
+  [4;35;1mTopic Load (0.5ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.3ms)
+Rendered topics/_topic (0.7ms)
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 14:53:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.4ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/topics/1]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 14:57:26) [GET]
+  [4;35;1mTopic Load (0.5ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.3ms)
+Rendered topics/_topic (0.7ms)
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 16:40:42) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 4) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/topics/4]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 16:40:44) [GET]
+  [4;35;1mTopic Load (0.5ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.3ms)
+Rendered topics/_topic (0.7ms)
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 19:22:12) [GET]
+  [4;36;1mTopic Load (0.7ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (3.1ms)
+Rendered topics/_topic (1.1ms)
+Completed in 72ms (View: 7, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 19:22:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.9ms)
+
+ActionView::TemplateError (undefined method `comments' for nil:NilClass) on line #10 of app/views/topics/show.html.erb:
+7: </p>
+8: 
+9: <div id="posts">
+10: 	<%=	render :partial => @post.comments %>
+11: </div>
+
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 19:22:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.4ms)
+  [4;35;1mPost Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) ) on line #10 of app/views/topics/show.html.erb:
+7: </p>
+8: 
+9: <div id="posts">
+10: 	<%=	render :partial => @topic.posts %>
+11: </div>
+
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (114.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 19:23:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (2.0ms)
+  [4;35;1mPost Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) ) on line #10 of app/views/topics/show.html.erb:
+7: </p>
+8: 
+9: <div id="posts">
+10: 	<%=	render :partial => @topic.posts %>
+11: </div>
+
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (114.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 19:23:59) [GET]
+
+ActionController::RoutingError (No route matches "/topic" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 19:24:01) [GET]
+  [4;36;1mTopic Load (0.5ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.3ms)
+Rendered topics/_topic (0.8ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 19:24:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.4ms)
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) ) on line #10 of app/views/topics/show.html.erb:
+7: </p>
+8: 
+9: <div id="posts">
+10: 	<%=	render :partial => @topic.posts %>
+11: </div>
+
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (112.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 19:28:38) [GET]
+  [4;35;1mTopic Load (0.5ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.7ms)
+Rendered topics/_topic (0.7ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 19:28:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+ERROR: compiling _run_erb_app47views47topics47show46html46erb RAISED compile error
+/Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:13: syntax error, unexpected ']', expecting '|'
+..._for [@topic, Post.new] do |f] ; @output_buffer.concat "\n\t...
+                              ^
+/Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:20: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47topics47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( render :partial => @topic ).to_s); @output_buffer.concat "\n\n<p>\n"
+
+
+; @output_buffer.concat(( link_to 'Edit', edit_topic_path(@topic) ).to_s); @output_buffer.concat " | \n"
+; @output_buffer.concat(( link_to 'Delete', @topic, :method => :delete, :confirm => "Are you sure?" ).to_s); @output_buffer.concat " |\n"
+; @output_buffer.concat(( link_to 'Back', topics_path ).to_s); @output_buffer.concat "\n</p>\n\n<div id=\"posts\">\n\t"
+
+
+
+; @output_buffer.concat((	render :partial => @topic.posts ).to_s); @output_buffer.concat "\n</div>\n\n"
+
+
+;  form_for [@topic, Post.new] do |f] ; @output_buffer.concat "\n\t<p>\n\t\t"
+
+; @output_buffer.concat(( f.label :body, "Reply" ).to_s); @output_buffer.concat "<br />\n\t\t"
+; @output_buffer.concat(( text_area :body ).to_s); @output_buffer.concat "\n\t</p>\n\t<p>"
+
+; @output_buffer.concat(( f.submit "Done" ).to_s); @output_buffer.concat "</p>\n"
+;  end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:20:in `compile!'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/Per/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/Per/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Library/WebServer/Documents/Rails/vePic/app/controllers/topics_controller.rb:18:in `show'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/Per/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/Per/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/Users/Per/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:13: syntax error, unexpected ']', expecting '|'
+..._for [@topic, Post.new] do |f] ; @output_buffer.concat "\n\t...
+                              ^
+/Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:20: syntax error, unexpected kENSURE, expecting $end) on line #13 of app/views/topics/show.html.erb:
+10: 	<%=	render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, Post.new] do |f] %>
+14: 	<p>
+15: 		<%= f.label :body, "Reply" %><br />
+16: 		<%= text_area :body %>
+
+    app/views/topics/show.html.erb:20:in `compile!'
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 19:28:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+ERROR: compiling _run_erb_app47views47topics47show46html46erb RAISED compile error
+/Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:13: syntax error, unexpected ']', expecting '|'
+..._for [@topic, Post.new] do |f] ; @output_buffer.concat "\n\t...
+                              ^
+/Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:20: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47topics47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( render :partial => @topic ).to_s); @output_buffer.concat "\n\n<p>\n"
+
+
+; @output_buffer.concat(( link_to 'Edit', edit_topic_path(@topic) ).to_s); @output_buffer.concat " | \n"
+; @output_buffer.concat(( link_to 'Delete', @topic, :method => :delete, :confirm => "Are you sure?" ).to_s); @output_buffer.concat " |\n"
+; @output_buffer.concat(( link_to 'Back', topics_path ).to_s); @output_buffer.concat "\n</p>\n\n<div id=\"posts\">\n\t"
+
+
+
+; @output_buffer.concat(( render :partial => @topic.posts ).to_s); @output_buffer.concat "\n</div>\n\n"
+
+
+;  form_for [@topic, Post.new] do |f] ; @output_buffer.concat "\n\t<p>\n\t\t"
+
+; @output_buffer.concat(( f.label :body, "Reply" ).to_s); @output_buffer.concat "<br />\n\t\t"
+; @output_buffer.concat(( text_area :body ).to_s); @output_buffer.concat "\n\t</p>\n\t<p>"
+
+; @output_buffer.concat(( f.submit "Done" ).to_s); @output_buffer.concat "</p>\n"
+;  end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:20:in `compile!'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/Per/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/Per/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Library/WebServer/Documents/Rails/vePic/app/controllers/topics_controller.rb:18:in `show'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/Per/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/Per/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/Users/Per/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:13: syntax error, unexpected ']', expecting '|'
+..._for [@topic, Post.new] do |f] ; @output_buffer.concat "\n\t...
+                              ^
+/Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:20: syntax error, unexpected kENSURE, expecting $end) on line #13 of app/views/topics/show.html.erb:
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, Post.new] do |f] %>
+14: 	<p>
+15: 		<%= f.label :body, "Reply" %><br />
+16: 		<%= text_area :body %>
+
+    app/views/topics/show.html.erb:20:in `compile!'
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 19:32:17) [GET]
+  [4;36;1mTopic Load (0.8ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (11.9ms)
+Rendered topics/_topic (0.8ms)
+Completed in 93ms (View: 82, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 19:32:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+ERROR: compiling _run_erb_app47views47topics47show46html46erb RAISED compile error
+/Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:13: syntax error, unexpected ']', expecting '|'
+..._for [@topic, Post.new] do |f] ; @output_buffer.concat "\n\t...
+                              ^
+/Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:20: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47topics47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( render :partial => @topic ).to_s); @output_buffer.concat "\n\n<p>\n"
+
+
+; @output_buffer.concat(( link_to 'Edit', edit_topic_path(@topic) ).to_s); @output_buffer.concat " | \n"
+; @output_buffer.concat(( link_to 'Delete', @topic, :method => :delete, :confirm => "Are you sure?" ).to_s); @output_buffer.concat " |\n"
+; @output_buffer.concat(( link_to 'Back', topics_path ).to_s); @output_buffer.concat "\n</p>\n\n<div id=\"posts\">\n\t"
+
+
+
+; @output_buffer.concat(( render :partial => @topic.posts ).to_s); @output_buffer.concat "\n</div>\n\n"
+
+
+;  form_for [@topic, Post.new] do |f] ; @output_buffer.concat "\n\t<p>\n\t\t"
+
+; @output_buffer.concat(( f.label :body, "Reply" ).to_s); @output_buffer.concat "<br />\n\t\t"
+; @output_buffer.concat(( text_area :body ).to_s); @output_buffer.concat "\n\t</p>\n\t<p>"
+
+; @output_buffer.concat(( f.submit "Done" ).to_s); @output_buffer.concat "</p>\n"
+;  end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:20:in `compile!'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/Per/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/Per/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Library/WebServer/Documents/Rails/vePic/app/controllers/topics_controller.rb:18:in `show'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/Per/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/Per/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/Users/Per/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:13: syntax error, unexpected ']', expecting '|'
+..._for [@topic, Post.new] do |f] ; @output_buffer.concat "\n\t...
+                              ^
+/Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:20: syntax error, unexpected kENSURE, expecting $end) on line #13 of app/views/topics/show.html.erb:
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, Post.new] do |f] %>
+14: 	<p>
+15: 		<%= f.label :body, "Reply" %><br />
+16: 		<%= text_area :body %>
+
+    app/views/topics/show.html.erb:20:in `compile!'
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.1ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 19:34:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+ERROR: compiling _run_erb_app47views47topics47show46html46erb RAISED compile error
+/Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:13: syntax error, unexpected ']', expecting '|'
+..._for [@topic, Post.new] do |f] ; @output_buffer.concat "\n\t...
+                              ^
+/Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:20: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47topics47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( render :partial => @topic ).to_s); @output_buffer.concat "\n\n<p>\n"
+
+
+; @output_buffer.concat(( link_to 'Edit', edit_topic_path(@topic) ).to_s); @output_buffer.concat " | \n"
+; @output_buffer.concat(( link_to 'Delete', @topic, :method => :delete, :confirm => "Are you sure?" ).to_s); @output_buffer.concat " |\n"
+; @output_buffer.concat(( link_to 'Back', topics_path ).to_s); @output_buffer.concat "\n</p>\n\n<div id=\"posts\">\n\t"
+
+
+
+; @output_buffer.concat(( render :partial => @topic.posts ).to_s); @output_buffer.concat "\n</div>\n\n"
+
+
+;  form_for [@topic, Post.new] do |f] ; @output_buffer.concat "\n\t<p>\n\t\t"
+
+; @output_buffer.concat(( f.label :body, "Reply" ).to_s); @output_buffer.concat "<br />\n\t\t"
+; @output_buffer.concat(( text_area :body ).to_s); @output_buffer.concat "\n\t</p>\n\t<p>"
+
+; @output_buffer.concat(( f.submit "Done" ).to_s); @output_buffer.concat "</p>\n"
+;  end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:20:in `compile!'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/Per/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/Per/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Library/WebServer/Documents/Rails/vePic/app/controllers/topics_controller.rb:18:in `show'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/Per/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/Per/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/Per/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/Per/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/Users/Per/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:13: syntax error, unexpected ']', expecting '|'
+..._for [@topic, Post.new] do |f] ; @output_buffer.concat "\n\t...
+                              ^
+/Library/WebServer/Documents/Rails/vePic/app/views/topics/show.html.erb:20: syntax error, unexpected kENSURE, expecting $end) on line #13 of app/views/topics/show.html.erb:
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, Post.new] do |f] %>
+14: 	<p>
+15: 		<%= f.label :body, "Reply" %><br />
+16: 		<%= text_area :body %>
+
+    app/views/topics/show.html.erb:20:in `compile!'
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 19:36:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.9ms)
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) ) on line #10 of app/views/topics/show.html.erb:
+7: </p>
+8: 
+9: <div id="posts">
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, Post.new] do |f| %>
+
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (114.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTopics (20100419103042)
+Migrating to CreatePosts (20100419103153)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("topics")[0m
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 19:36:56) [GET]
+  [4;36;1mTopic Load (0.8ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (12.2ms)
+Rendered topics/_topic (0.8ms)
+Completed in 94ms (View: 84, DB: 1) | 200 OK [http://localhost/topics/]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 19:36:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.7ms)
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) ) on line #10 of app/views/topics/show.html.erb:
+7: </p>
+8: 
+9: <div id="posts">
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, Post.new] do |f| %>
+
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (115.7ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-04-20 19:37:20) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-04-20 19:37:25) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "topic"=>{"body"=>"Test", "title"=>"Skeden"}}
+  [4;35;1mTopic Create (0.4ms)[0m   [0mINSERT INTO "topics" ("created_at", "title", "body", "updated_at") VALUES('2010-04-20 17:37:25', 'Skeden', 'Test', '2010-04-20 17:37:25')[0m
+Redirected to http://localhost:3000/topics/5
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 19:37:25) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 5) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.4ms)
+  [4;35;1mPost Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 5) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 5) ) on line #10 of app/views/topics/show.html.erb:
+7: </p>
+8: 
+9: <div id="posts">
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, Post.new] do |f| %>
+
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (112.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 19:43:32) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 5) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.6ms)
+  [4;35;1mPost Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 5) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 5) ) on line #10 of app/views/topics/show.html.erb:
+7: </p>
+8: 
+9: <div id="posts">
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, Post.new] do |f| %>
+
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 19:44:39) [GET]
+  [4;36;1mTopic Load (0.5ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (67.8ms)
+Rendered topics/_topic (0.8ms)
+Rendered topics/_topic (0.7ms)
+Completed in 76ms (View: 71, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 19:44:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.7ms)
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) ) on line #10 of app/views/topics/show.html.erb:
+7: </p>
+8: 
+9: <div id="posts">
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, Post.new] do |f| %>
+
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 19:50:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.6ms)
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) ) on line #10 of app/views/topics/show.html.erb:
+7: </p>
+8: 
+9: <div id="posts">
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, Post.new] do |f| %>
+
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTopics (20100419103042)
+Migrating to CreatePosts (20100419103153)
+Migrating to AddTopicIdToPost (20100420180329)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100420180329')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("topics")[0m
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 20:15:18) [GET]
+  [4;35;1mTopic Load (0.6ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.4ms)
+Rendered topics/_topic (0.7ms)
+Rendered topics/_topic (0.7ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 20:15:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;35;1mPost Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) ) on line #10 of app/views/topics/show.html.erb:
+7: </p>
+8: 
+9: <div id="posts">
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, Post.new] do |f| %>
+
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTopics (20100419103042)
+Migrating to CreatePosts (20100419103153)
+Migrating to AddTopicIdToPost (20100420180329)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("topics")[0m
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 20:15:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;35;1mPost Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) ) on line #10 of app/views/topics/show.html.erb:
+7: </p>
+8: 
+9: <div id="posts">
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, Post.new] do |f| %>
+
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (113.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 20:15:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.6ms)
+  [4;35;1mPost Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) ) on line #10 of app/views/topics/show.html.erb:
+7: </p>
+8: 
+9: <div id="posts">
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, Post.new] do |f| %>
+
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (114.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTopics (20100419103042)
+Migrating to CreatePosts (20100419103153)
+Migrating to AddTopicIdToPost (20100420180329)
+Migrating to AddTopicIdToPosts (20100420181635)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: no such table: post: ALTER TABLE "post" ADD "topicid" integer[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTopics (20100419103042)
+Migrating to CreatePosts (20100419103153)
+Migrating to AddTopicIdToPost (20100420180329)
+Migrating to AddTopicIdToPosts (20100420181635)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "posts" ADD "topicid" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100420181635')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("topics")[0m
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 20:18:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;35;1mPost Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) ) on line #10 of app/views/topics/show.html.erb:
+7: </p>
+8: 
+9: <div id="posts">
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, Post.new] do |f| %>
+
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 20:18:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.7ms)
+  [4;35;1mPost Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) ) on line #10 of app/views/topics/show.html.erb:
+7: </p>
+8: 
+9: <div id="posts">
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, Post.new] do |f| %>
+
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 20:21:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;35;1mPost Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: posts.topic_id: SELECT * FROM "posts" WHERE ("posts".topic_id = 1) ) on line #10 of app/views/topics/show.html.erb:
+7: </p>
+8: 
+9: <div id="posts">
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, Post.new] do |f| %>
+
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (114.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTopics (20100419103042)
+Migrating to CreatePosts (20100419103153)
+Migrating to AddTopicIdToPosts (20100420181635)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("topics")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddTopicIdToPosts (20100420181635)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TEMPORARY TABLE "altered_posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "created_at" datetime, "updated_at" datetime, "topicid" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "posts"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_posts")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "altered_posts"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100420181635'[0m
+Migrating to CreatePosts (20100419103153)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mDROP TABLE "posts"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100419103153'[0m
+Migrating to CreateTopics (20100419103042)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mDROP TABLE "topics"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100419103042'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddTopicIdToPosts (20100420181635)
+Migrating to CreatePosts (20100419103153)
+Migrating to CreateTopics (20100419103042)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddTopicIdToPosts (20100420181635)
+Migrating to CreatePosts (20100419103153)
+Migrating to CreateTopics (20100419103042)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTopics (20100419103042)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419103042')[0m
+Migrating to CreatePosts (20100419103153)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419103153')[0m
+Migrating to AddTopicIdToPosts (20100420181635)
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "posts" ADD "topic_id" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100420181635')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("topics")[0m
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 20:30:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.1ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Topic with ID=1):
+  app/controllers/topics_controller.rb:16:in `show'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 20:30:26) [GET]
+  [4;35;1mTopic Load (0.4ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-04-20 20:30:27) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 73ms (View: 4, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-04-20 20:30:39) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "topic"=>{"body"=>"Här är en jeffla massa skit hörrni!", "title"=>"Skedens sked"}}
+  [4;36;1mTopic Create (0.3ms)[0m   [0;1mINSERT INTO "topics" ("created_at", "title", "body", "updated_at") VALUES('2010-04-20 18:30:39', 'Skedens sked', 'Här är en jeffla massa skit hörrni!', '2010-04-20 18:30:39')[0m
+Redirected to http://localhost:3000/topics/1
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 20:30:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #16 of app/views/topics/show.html.erb:
+13: <% form_for [@topic, Post.new] do |f| %>
+14: 	<p>
+15: 		<%= f.label :body, "Reply" %><br />
+16: 		<%= text_area :body %>
+17: 	</p>
+18: 	<p><%= f.submit "Done" %></p>
+19: <% end %>
+
+    app/views/topics/show.html.erb:16:in `text_area'
+    app/views/topics/show.html.erb:16
+    app/views/topics/show.html.erb:13
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 20:35:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.3ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.8ms)
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Completed in 85ms (View: 79, DB: 0) | 200 OK [http://localhost/topics/1]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-04-20 20:35:09) [POST]
+  Parameters: {"commit"=>"Done", "post"=>{"body"=>"Sked"}, "authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "topic_id"=>"1"}
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("created_at", "body", "updated_at", "topic_id") VALUES('2010-04-20 18:35:09', 'Sked', '2010-04-20 18:35:09', NULL)[0m
+
+NoMethodError (undefined method `post_url' for #<PostsController:0x104423970>):
+  app/controllers/posts_controller.rb:48:in `create'
+  app/controllers/posts_controller.rb:45:in `create'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 20:37:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/topics/1]
+
+
+Processing TopicsController#edit (for 127.0.0.1 at 2010-04-20 20:37:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/edit
+Completed in 76ms (View: 71, DB: 0) | 200 OK [http://localhost/topics/1/edit]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 20:37:41) [GET]
+  [4;35;1mTopic Load (0.4ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.3ms)
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 20:37:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.6ms)
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/topics/1]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-04-20 20:37:47) [POST]
+  Parameters: {"commit"=>"Reply", "post"=>{"body"=>"Sked"}, "authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "topic_id"=>"1"}
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("created_at", "body", "updated_at", "topic_id") VALUES('2010-04-20 18:37:47', 'Sked', '2010-04-20 18:37:47', NULL)[0m
+
+NoMethodError (undefined method `post_url' for #<PostsController:0x104313f08>):
+  app/controllers/posts_controller.rb:48:in `create'
+  app/controllers/posts_controller.rb:45:in `create'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-04-20 20:40:53) [POST]
+  Parameters: {"commit"=>"Reply", "post"=>{"body"=>"Sked"}, "authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "topic_id"=>"1"}
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("created_at", "body", "updated_at", "topic_id") VALUES('2010-04-20 18:40:53', 'Sked', '2010-04-20 18:40:53', NULL)[0m
+
+NoMethodError (undefined method `post_url' for #<PostsController:0x104125188>):
+  app/controllers/posts_controller.rb:48:in `create'
+  app/controllers/posts_controller.rb:45:in `create'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-04-20 20:41:02) [POST]
+  Parameters: {"commit"=>"Reply", "post"=>{"body"=>"Sked"}, "authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "topic_id"=>"1"}
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("created_at", "body", "updated_at", "topic_id") VALUES('2010-04-20 18:41:02', 'Sked', '2010-04-20 18:41:02', NULL)[0m
+
+NoMethodError (undefined method `post_url' for #<PostsController:0x1043164d8>):
+  app/controllers/posts_controller.rb:48:in `create'
+  app/controllers/posts_controller.rb:45:in `create'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-04-20 20:41:47) [POST]
+  Parameters: {"commit"=>"Reply", "post"=>{"body"=>"Sked"}, "authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "topic_id"=>"1"}
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("created_at", "body", "updated_at", "topic_id") VALUES('2010-04-20 18:41:47', 'Sked', '2010-04-20 18:41:47', NULL)[0m
+
+NoMethodError (undefined method `post_url' for #<PostsController:0x10412a9f8>):
+  app/controllers/posts_controller.rb:48:in `create'
+  app/controllers/posts_controller.rb:45:in `create'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-20 20:42:13) [GET]
+  [4;36;1mTopic Load (0.5ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.2ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-20 20:42:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/topics/1]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-04-20 20:48:31) [POST]
+  Parameters: {"commit"=>"Reply", "post"=>{"body"=>"restekp"}, "authenticity_token"=>"06woywefk/CFFoCUhZ9+x5AynWqsD7ncNZK07CaZWCc=", "topic_id"=>"1"}
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("created_at", "body", "updated_at", "topic_id") VALUES('2010-04-20 18:48:31', 'restekp', '2010-04-20 18:48:31', NULL)[0m
+
+NoMethodError (undefined method `post_url' for #<PostsController:0x1041cd8d8>):
+  app/controllers/posts_controller.rb:48:in `create'
+  app/controllers/posts_controller.rb:45:in `create'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (94.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-21 09:09:44) [GET]
+  [4;36;1mTopic Load (0.8ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (11.8ms)
+Completed in 95ms (View: 84, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-21 09:09:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.7ms)
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/topics/1]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-04-21 09:09:52) [POST]
+  Parameters: {"commit"=>"Reply", "post"=>{"body"=>"Skeden!"}, "authenticity_token"=>"kM5HYky+gbCcJpaaNa5jzlwOLJoQmFvdyteUVgQrqv0=", "topic_id"=>"1"}
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("created_at", "body", "updated_at", "topic_id") VALUES('2010-04-21 07:09:52', 'Skeden!', '2010-04-21 07:09:52', NULL)[0m
+
+NoMethodError (undefined method `post_url' for #<PostsController:0x10431c360>):
+  app/controllers/posts_controller.rb:48:in `create'
+  app/controllers/posts_controller.rb:45:in `create'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (96.6ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-04-21 11:04:39) [POST]
+  Parameters: {"commit"=>"Reply", "post"=>{"body"=>"Skeden!"}, "authenticity_token"=>"kM5HYky+gbCcJpaaNa5jzlwOLJoQmFvdyteUVgQrqv0=", "topic_id"=>"1"}
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("created_at", "body", "updated_at", "topic_id") VALUES('2010-04-21 09:04:39', 'Skeden!', '2010-04-21 09:04:39', NULL)[0m
+
+NoMethodError (undefined method `post_url' for #<PostsController:0x1044524a0>):
+  app/controllers/posts_controller.rb:48:in `create'
+  app/controllers/posts_controller.rb:45:in `create'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-21 11:04:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `post' for #<ActionView::Base:0x10424fa68>) on line #13 of app/views/topics/show.html.erb:
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, post.new] do |f| %>
+14: 	<p>
+15: 		<%= f.label :body, "Reply to this topic" %><br />
+16: 		<%= f.text_area :body %>
+
+    app/views/topics/show.html.erb:13
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (100.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-21 11:04:44) [GET]
+  [4;35;1mTopic Load (0.5ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.5ms)
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-21 11:04:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `post' for #<ActionView::Base:0x1042e25e8>) on line #13 of app/views/topics/show.html.erb:
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, post.new] do |f| %>
+14: 	<p>
+15: 		<%= f.label :body, "Reply to this topic" %><br />
+16: 		<%= f.text_area :body %>
+
+    app/views/topics/show.html.erb:13
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (102.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-21 11:04:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `post' for #<ActionView::Base:0x10441a1e0>) on line #13 of app/views/topics/show.html.erb:
+10: 	<%= render :partial => @topic.posts %>
+11: </div>
+12: 
+13: <% form_for [@topic, post.new] do |f| %>
+14: 	<p>
+15: 		<%= f.label :body, "Reply to this topic" %><br />
+16: 		<%= f.text_area :body %>
+
+    app/views/topics/show.html.erb:13
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-21 11:04:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.7ms)
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Completed in 82ms (View: 77, DB: 0) | 200 OK [http://localhost/topics/1]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-04-21 11:05:22) [POST]
+  Parameters: {"commit"=>"Reply", "post"=>{"body"=>"Fawwk"}, "authenticity_token"=>"kM5HYky+gbCcJpaaNa5jzlwOLJoQmFvdyteUVgQrqv0=", "topic_id"=>"1"}
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("created_at", "body", "updated_at", "topic_id") VALUES('2010-04-21 09:05:22', 'Fawwk', '2010-04-21 09:05:22', NULL)[0m
+
+NoMethodError (undefined method `post_url' for #<PostsController:0x1044413d0>):
+  app/controllers/posts_controller.rb:48:in `create'
+  app/controllers/posts_controller.rb:45:in `create'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-21 11:22:30) [GET]
+  [4;35;1mTopic Load (0.5ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.8ms)
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/topics/]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-21 11:22:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/topics/1]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-04-21 11:22:34) [POST]
+  Parameters: {"commit"=>"Reply", "post"=>{"body"=>"Sked"}, "authenticity_token"=>"kM5HYky+gbCcJpaaNa5jzlwOLJoQmFvdyteUVgQrqv0=", "topic_id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("created_at", "body", "updated_at", "topic_id") VALUES('2010-04-21 09:22:35', 'Sked', '2010-04-21 09:22:35', 1)[0m
+Redirected to http://localhost:3000/topics/1
+Completed in 77ms (DB: 1) | 302 Found [http://localhost/topics/1/posts]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-21 11:22:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Rendered posts/_post (101.7ms)
+Completed in 124ms (View: 118, DB: 1) | 200 OK [http://localhost/topics/1]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-21 11:24:11) [GET]
+  [4;36;1mTopic Load (0.5ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.3ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-21 11:24:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Rendered posts/_post (2.3ms)
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/topics/1]
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2010-04-21 11:24:16) [POST]
+  Parameters: {"commit"=>"Reply", "post"=>{"body"=>"Saker"}, "authenticity_token"=>"kM5HYky+gbCcJpaaNa5jzlwOLJoQmFvdyteUVgQrqv0=", "topic_id"=>"1"}
+
+SyntaxError (/Library/WebServer/Documents/Rails/vePic/app/controllers/posts_controller.rb:86: syntax error, unexpected $end, expecting kEND):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (83.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-04-21 11:25:27) [POST]
+  Parameters: {"commit"=>"Reply", "post"=>{"body"=>"Saker"}, "authenticity_token"=>"kM5HYky+gbCcJpaaNa5jzlwOLJoQmFvdyteUVgQrqv0=", "topic_id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("created_at", "body", "updated_at", "topic_id") VALUES('2010-04-21 09:25:27', 'Saker', '2010-04-21 09:25:27', 1)[0m
+Redirected to http://localhost:3000/topics/1
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/topics/1/posts]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-21 11:25:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Rendered posts/_post (2.3ms)
+Rendered posts/_post (0.4ms)
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/topics/1]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-21 11:25:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.4ms)
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ActionView::TemplateError (undefined method `created_at' for #<Class:0x1041e3818>) on line #3 of app/views/posts/_post.html.erb:
+1: <% div_for post do %>
+2: 	<p>
+3: 		<em>Posted <% time_ago_in_words(Post.created_at) %> ago</em><br />
+4: 		<%=	h(post.body) %>
+5: 	</p>
+6: <% end %>
+
+    app/views/posts/_post.html.erb:3
+    app/views/posts/_post.html.erb:1
+    app/views/topics/show.html.erb:10
+    app/controllers/topics_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-21 11:27:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.6ms)
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Rendered posts/_post (2.8ms)
+Rendered posts/_post (0.4ms)
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/topics/1]
+
+
+Processing TopicsController#index (for 85.24.223.62 at 2010-04-21 11:52:38) [GET]
+  [4;36;1mTopic Load (0.4ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.4ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://sked.dyndns.org/topics]
+
+
+Processing TopicsController#index (for 85.224.109.21 at 2010-04-21 11:53:34) [GET]
+  [4;35;1mTopic Load (0.5ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.3ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://sked.dyndns.org/topics]
+
+
+Processing TopicsController#show (for 85.24.223.62 at 2010-04-21 11:55:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Rendered posts/_post (3.0ms)
+Rendered posts/_post (0.5ms)
+Completed in 91ms (View: 86, DB: 1) | 200 OK [http://sked.dyndns.org/topics/1]
+
+
+Processing TopicsController#index (for 85.224.109.21 at 2010-04-21 11:55:40) [GET]
+  [4;36;1mTopic Load (0.5ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.5ms)
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://sked.dyndns.org/topics]
+
+
+Processing TopicsController#new (for 85.224.109.21 at 2010-04-21 11:55:44) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://sked.dyndns.org/topics/new]
+
+
+Processing TopicsController#index (for 85.24.223.62 at 2010-04-21 11:56:49) [GET]
+  [4;35;1mTopic Load (0.5ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.6ms)
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://sked.dyndns.org/topics]
+
+
+Processing TopicsController#create (for 85.224.109.21 at 2010-04-21 11:56:52) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"oTWNs3xi0GW3temLLz3K9UjMsVtneq8hERr2RxY05AI=", "topic"=>{"body"=>"NoMethodError in PostsController#create\r\nundefined method `post_url' for #<PostsController:0x10431c360>\r\nRAILS_ROOT: /Library/WebServer/Documents/Rails/vePic\r\nApplication Trace | Framework Trace | Full Trace\r\n/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/polymorphic_routes.rb:107:in `__send__'\r\n/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/polymorphic_routes.rb:107:in `polymorphic_url'\r\n/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:636:in `url_for'\r\n/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1131:in `redirect_to'\r\n/Library/WebServer/Documents/Rails/vePic/app/controllers/posts_controller.rb:48:in `create'\r\n/Library/WebServer/Documents/Rails/vePic/app/controllers/posts_controller.rb:45:in `create'", "title"=>"Jag gillar Apple."}}
+  [4;36;1mTopic Create (0.3ms)[0m   [0;1mINSERT INTO "topics" ("created_at", "title", "body", "updated_at") VALUES('2010-04-21 09:56:52', 'Jag gillar Apple.', 'NoMethodError in PostsController#create
+undefined method `post_url'' for #<PostsController:0x10431c360>
+RAILS_ROOT: /Library/WebServer/Documents/Rails/vePic
+Application Trace | Framework Trace | Full Trace
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/polymorphic_routes.rb:107:in `__send__''
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/polymorphic_routes.rb:107:in `polymorphic_url''
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:636:in `url_for''
+/Users/Per/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1131:in `redirect_to''
+/Library/WebServer/Documents/Rails/vePic/app/controllers/posts_controller.rb:48:in `create''
+/Library/WebServer/Documents/Rails/vePic/app/controllers/posts_controller.rb:45:in `create''', '2010-04-21 09:56:52')[0m
+Redirected to http://sked.dyndns.org:3000/topics/2
+Completed in 9ms (DB: 0) | 302 Found [http://sked.dyndns.org/topics]
+
+
+Processing TopicsController#show (for 85.224.109.21 at 2010-04-21 11:56:53) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.7ms)
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts".topic_id = 2) [0m
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://sked.dyndns.org/topics/2]
+
+
+Processing TopicsController#index (for 85.24.223.62 at 2010-04-21 11:57:04) [GET]
+  [4;35;1mTopic Load (0.5ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.3ms)
+Rendered topics/_topic (0.9ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://sked.dyndns.org/topics]
+
+
+Processing TopicsController#show (for 85.24.223.62 at 2010-04-21 11:57:09) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.7ms)
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts".topic_id = 2) [0m
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://sked.dyndns.org/topics/2]
+
+
+Processing TopicsController#index (for 85.224.109.21 at 2010-04-21 11:57:10) [GET]
+  [4;36;1mTopic Load (0.5ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.4ms)
+Rendered topics/_topic (0.9ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://sked.dyndns.org/topics]
+
+
+Processing PostsController#create (for 85.24.223.62 at 2010-04-21 11:57:40) [POST]
+  Parameters: {"commit"=>"Reply", "post"=>{"body"=>"Du suger!"}, "authenticity_token"=>"T4GZnmRu7AEfxCVrU8TU67R3kPu8VNO7WF3+39N6TSw=", "topic_id"=>"2"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("created_at", "body", "updated_at", "topic_id") VALUES('2010-04-21 09:57:40', 'Du suger!', '2010-04-21 09:57:40', 2)[0m
+Redirected to http://sked.dyndns.org:3000/topics/2
+Completed in 71ms (DB: 1) | 302 Found [http://sked.dyndns.org/topics/2/posts]
+
+
+Processing TopicsController#show (for 85.24.223.62 at 2010-04-21 11:57:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.6ms)
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts".topic_id = 2) [0m
+Rendered posts/_post (2.6ms)
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://sked.dyndns.org/topics/2]
+
+
+Processing TopicsController#index (for 85.24.223.62 at 2010-04-21 11:57:44) [GET]
+  [4;35;1mTopic Load (0.5ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.4ms)
+Rendered topics/_topic (0.9ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://sked.dyndns.org/topics]
+
+
+Processing TopicsController#index (for 85.224.109.21 at 2010-04-21 12:02:14) [GET]
+  [4;36;1mTopic Load (0.5ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.4ms)
+Rendered topics/_topic (0.9ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://sked.dyndns.org/topics]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-21 12:04:36) [GET]
+  [4;35;1mTopic Load (0.5ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.7ms)
+Rendered topics/_topic (0.9ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-21 12:15:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (60.0ms)
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.4ms)
+Completed in 88ms (View: 82, DB: 1) | 200 OK [http://localhost/topics/1]
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2010-04-21 12:15:14) [POST]
+  Parameters: {"commit"=>"Reply", "post"=>{"body"=>"Bus!"}, "authenticity_token"=>"kM5HYky+gbCcJpaaNa5jzlwOLJoQmFvdyteUVgQrqv0=", "topic_id"=>"1", "_"=>""}
+
+SyntaxError (/Library/WebServer/Documents/Rails/vePic/app/controllers/posts_controller.rb:78: syntax error, unexpected $end, expecting kEND):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2010-04-21 12:15:17) [POST]
+  Parameters: {"commit"=>"Reply", "post"=>{"body"=>"Bus!"}, "authenticity_token"=>"kM5HYky+gbCcJpaaNa5jzlwOLJoQmFvdyteUVgQrqv0=", "topic_id"=>"1", "_"=>""}
+
+SyntaxError (/Library/WebServer/Documents/Rails/vePic/app/controllers/posts_controller.rb:78: syntax error, unexpected $end, expecting kEND):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-04-21 12:16:27) [POST]
+  Parameters: {"commit"=>"Reply", "post"=>{"body"=>"Bus!"}, "authenticity_token"=>"kM5HYky+gbCcJpaaNa5jzlwOLJoQmFvdyteUVgQrqv0=", "topic_id"=>"1", "_"=>""}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("created_at", "body", "updated_at", "topic_id") VALUES('2010-04-21 10:16:27', 'Bus!', '2010-04-21 10:16:27', 1)[0m
+Rendering posts/create
+Rendered posts/_post (2.6ms)
+Completed in 19ms (View: 7, DB: 1) | 200 OK [http://localhost/topics/1/posts]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-21 12:16:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.4ms)
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Rendered posts/_post (2.2ms)
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/topics/1]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-04-21 16:15:01) [POST]
+  Parameters: {"commit"=>"Reply", "post"=>{"body"=>"Jag HATAR!"}, "authenticity_token"=>"kM5HYky+gbCcJpaaNa5jzlwOLJoQmFvdyteUVgQrqv0=", "topic_id"=>"1", "_"=>""}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("created_at", "body", "updated_at", "topic_id") VALUES('2010-04-21 14:15:01', 'Jag HATAR!', '2010-04-21 14:15:01', 1)[0m
+Rendering posts/create
+Rendered posts/_post (2.4ms)
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://localhost/topics/1/posts]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-04-21 19:40:02) [GET]
+  [4;36;1mTopic Load (0.5ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.4ms)
+Rendered topics/_topic (0.9ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-21 19:40:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.7ms)
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Rendered posts/_post (2.5ms)
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.4ms)
+Completed in 82ms (View: 19, DB: 1) | 200 OK [http://localhost/topics/1]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-21 19:40:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Rendered posts/_post (2.3ms)
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.4ms)
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/topics/1]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-04-21 19:40:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Rendered posts/_post (2.2ms)
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered posts/_post (0.3ms)
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/topics/1]
+
+
+Processing TopicsController#index (for 85.24.223.62 at 2010-04-22 17:47:55) [GET]
+  [4;35;1mTopic Load (0.5ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.5ms)
+Rendered topics/_topic (0.9ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://sked.dyndns.org/topics]
+
+
+Processing TopicsController#show (for 85.24.223.62 at 2010-04-22 17:48:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.5ms)
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Rendered posts/_post (18.7ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.5ms)
+Completed in 173ms (View: 167, DB: 1) | 200 OK [http://sked.dyndns.org/topics/1]
+  [4;36;1mSQL (22.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTopics (20100419103042)
+Migrating to CreatePosts (20100419103153)
+Migrating to AddTopicIdToPosts (20100420181635)
+Migrating to CreateGroups (20100421160845)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "user_id" integer, "topic_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100421160845')[0m
+Migrating to CreateUsers (20100421160853)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "username" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100421160853')[0m
+Migrating to CreateSlideshows (20100422202020)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "slideshows" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100422202020')[0m
+Migrating to CreateSlides (20100422203713)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "slides" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "slideshow_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100422203713')[0m
+Migrating to CreateImages (20100422203949)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "slide_id" integer, "path" varchar(255), "title" varchar(255), "author" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100422203949')[0m
+Migrating to CreateHighlights (20100422204255)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "highlights" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "x" integer, "y" integer, "h" integer, "w" integer, "slide_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100422204255')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("groups")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("highlights")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("images")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("slides")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("slideshows")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("topics")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing TopicsController#index (for 85.24.223.62 at 2010-04-25 18:58:44) [GET]
+  [4;36;1mTopic Load (10.5ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (107.9ms)
+Rendered topics/_topic (1.3ms)
+Completed in 377ms (View: 293, DB: 11) | 200 OK [http://sked.dyndns.org/topics]
+
+
+Processing TopicsController#show (for 85.24.223.62 at 2010-04-25 18:59:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (2.4ms)
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts".topic_id = 1) [0m
+Rendered posts/_post (96.7ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.4ms)
+Completed in 206ms (View: 198, DB: 1) | 200 OK [http://sked.dyndns.org/topics/1]
+
+
+Processing TopicsController#index (for 85.24.223.62 at 2010-04-25 18:59:43) [GET]
+  [4;35;1mTopic Load (0.6ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.6ms)
+Rendered topics/_topic (1.0ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://sked.dyndns.org/topics]
+
+
+Processing TopicsController#show (for 85.24.223.62 at 2010-04-25 18:59:45) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mTopic Load (0.2ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.8ms)
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts".topic_id = 2) [0m
+Rendered posts/_post (2.4ms)
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://sked.dyndns.org/topics/2]
+
+
+Processing TopicsController#index (for 85.24.223.62 at 2010-04-25 18:59:50) [GET]
+  [4;36;1mTopic Load (0.6ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.4ms)
+Rendered topics/_topic (0.9ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://sked.dyndns.org/topics]
+
+
+Processing TopicsController#show (for 85.24.223.62 at 2010-04-25 19:05:50) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTopic Load (0.2ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Rendered topics/_topic (1.9ms)
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts".topic_id = 2) [0m
+Rendered posts/_post (2.6ms)
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://sked.dyndns.org/topics/2]
+
+
+Processing TopicsController#index (for 85.24.223.62 at 2010-04-25 19:05:58) [GET]
+  [4;35;1mTopic Load (0.8ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Rendered topics/_topic (2.4ms)
+Rendered topics/_topic (0.9ms)
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://sked.dyndns.org/topics]

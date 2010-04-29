@@ -1,0 +1,33 @@
+<p>
+  <b>Body:</b>
+  <%=h @highlight.body %>
+</p>
+
+<p>
+  <b>X:</b>
+  <%=h @highlight.x %>
+</p>
+
+<p>
+  <b>Y:</b>
+  <%=h @highlight.y %>
+</p>
+
+<p>
+  <b>H:</b>
+  <%=h @highlight.h %>
+</p>
+
+<p>
+  <b>W:</b>
+  <%=h @highlight.w %>
+</p>
+
+<p>
+  <b>Slide:</b>
+  <%=h @highlight.slide_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_highlight_path(@highlight) %> |
+<%= link_to 'Back', highlights_path %>

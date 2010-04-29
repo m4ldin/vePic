@@ -1,0 +1,3 @@
+page.insert_html :bottom, :posts, :partial => @post
+page[@post].visual_effect :highlight
+page[:new_post].reset

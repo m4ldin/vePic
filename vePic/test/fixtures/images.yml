@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  slide_id: 1
+  path: MyString
+  title: MyString
+  author: MyString
+
+two:
+  slide_id: 1
+  path: MyString
+  title: MyString
+  author: MyString

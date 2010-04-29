@@ -1,0 +1,6 @@
+<% div_for post do %>
+	<p>
+		<em>Posted <%= time_ago_in_words(post.created_at) %> ago</em><br />
+		<%=	h(post.body) %>
+	</p>
+<% end %>

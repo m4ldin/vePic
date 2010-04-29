@@ -1,0 +1,36 @@
+<h1>Editing highlight</h1>
+
+<% form_for(@highlight) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :x %><br />
+    <%= f.text_field :x %>
+  </p>
+  <p>
+    <%= f.label :y %><br />
+    <%= f.text_field :y %>
+  </p>
+  <p>
+    <%= f.label :h %><br />
+    <%= f.text_field :h %>
+  </p>
+  <p>
+    <%= f.label :w %><br />
+    <%= f.text_field :w %>
+  </p>
+  <p>
+    <%= f.label :slide_id %><br />
+    <%= f.text_field :slide_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @highlight %> |
+<%= link_to 'Back', highlights_path %>
