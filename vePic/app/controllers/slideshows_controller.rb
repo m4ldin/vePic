@@ -1,3 +1,5 @@
+require 'json'
+
 class SlideshowsController < ApplicationController
 
   def serializeSlideshow(slideshow)
@@ -13,7 +15,7 @@ class SlideshowsController < ApplicationController
       end
       slides << {'title' => slide.title, 'body' => slide.body, 'posts' => posts, 'highlights' => highlights}
     end
-    {'slides' => slides}
+    {'slides' => slides}.to_json
   end
   
   # GET /slideshows
