@@ -1,4 +1,21 @@
 class SlideshowsController < ApplicationController
+
+  def serializeSlideshow(slideshow)
+    slides = []
+    slideshow.slides.each do |slide|
+      posts = []
+      highlights = []
+      slide.posts.each do |post|
+        posts << {'body' => post.body}
+      end
+      slide.highlights.each do |highlight|
+        highlights << {'body' => highlight.body, 'x' => highlight.x, 'y' => highlight.y, 'w' => highlight.w, 'h' => highlight.h}
+      end
+      slides << {'title' => slide.title, 'body' => slide.body, 'posts' => posts, 'highlights' => highlights}
+    end
+    {'slides' => slides}
+  end
+  
   # GET /slideshows
   # GET /slideshows.xml
   def index
