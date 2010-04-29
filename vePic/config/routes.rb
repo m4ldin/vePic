@@ -1,7 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :slideshows, :has_many => :slides, :has_many => [:highlights :images]
-
+  map.resources :slideshows do |slideshows|
+   slideshows.resources :slides do |slides|
+     slides.resources :highlights
+     slides.resources :images
+   end
+  end
+  
   map.resources :groups
 
   map.resources :users
