@@ -7,6 +7,8 @@ ActionController::Routing::Routes.draw do |map|
    end
   end
   
+  map.resources :uploads
+  
   map.resources :groups
 
   map.resources :users
