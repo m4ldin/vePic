@@ -3936,3 +3936,42 @@ Rendering rescues/layout (internal_server_error)
 Processing UploadController#index (for 127.0.0.1 at 2010-05-03 16:00:15) [GET]
 Rendering app/views/upload/uploadfile.rhtml
 Completed in 39ms (View: 37, DB: 0) | 200 OK [http://localhost/upload/]
+
+
+Processing UploadController#index (for 127.0.0.1 at 2010-05-03 16:09:07) [GET]
+Rendering app/views/upload/uploadfile.rhtml
+Completed in 63ms (View: 61, DB: 0) | 200 OK [http://localhost/upload/index]
+
+
+Processing UploadController#index (for 85.224.109.21 at 2010-05-03 16:09:14) [GET]
+Rendering app/views/upload/uploadfile.rhtml
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://sked.dyndns.org/upload/]
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2010-05-03 16:12:15) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:/var/folders/px/pxtqumI1FjeWyT2fS9-wYk+++TI/-Tmp-/RackMultipart20100503-45012-9raqqw-0>}, "authenticity_token"=>"uDfchywHWuoD0HTjMAp1q413mCB3d6Tu+mmXBRRqWF0="}
+
+Errno::ENOENT (No such file or directory - public/data/hund.jpg):
+  app/models/data_file.rb:8:in `initialize'
+  app/models/data_file.rb:8:in `open'
+  app/models/data_file.rb:8:in `save'
+  app/controllers/upload_controller.rb:6:in `uploadFile'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (87.9ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2010-05-03 16:13:34) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:/var/folders/px/pxtqumI1FjeWyT2fS9-wYk+++TI/-Tmp-/RackMultipart20100503-45012-w937op-0>}, "authenticity_token"=>"uDfchywHWuoD0HTjMAp1q413mCB3d6Tu+mmXBRRqWF0="}
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
