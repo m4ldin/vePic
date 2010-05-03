@@ -3,6 +3,9 @@
   <%=h @slideshow.title %>
 </p>
 
+<script type="text/javascript">
+var slideshow = <%= serializeSlideshow(@slideshow) %>;
+</script>
 
 <%= link_to 'Edit', edit_slideshow_path(@slideshow) %> |
 <%= link_to 'Back', slideshows_path %>
