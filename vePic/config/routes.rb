@@ -13,7 +13,6 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :users
 
-
   map.resources :topics, :has_many => :posts
 
   # The priority is based upon order of creation: first created -> highest priority.
