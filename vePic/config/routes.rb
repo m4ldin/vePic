@@ -7,7 +7,8 @@ ActionController::Routing::Routes.draw do |map|
    end
   end
   
-  map.resources :uploads
+  map.connect 'upload', :controller => 'upload', :action => 'index'
+  map.connect 'upload/uploadFile', :controller => 'upload', :action => 'uploadFile'
   
   map.resources :groups
 
