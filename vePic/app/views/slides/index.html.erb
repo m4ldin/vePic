@@ -8,6 +8,7 @@
 
 <% @slides.each do |slide| %>
   <tr>
+	<img src= "<%= slide.image.path %>">
     <td><%=h slide.title %></td>
     <td><%=h slide.body %></td>
     <td><%= link_to 'Show', slide %></td>
@@ -18,5 +19,3 @@
 </table>
 
 <br />
-
-<%= link_to 'New slide', new_slide_path %>

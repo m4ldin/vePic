@@ -3975,3 +3975,1211 @@ Rendering rescues/layout (internal_server_error)
 Processing UploadController#uploadFile (for 127.0.0.1 at 2010-05-03 16:13:34) [POST]
   Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:/var/folders/px/pxtqumI1FjeWyT2fS9-wYk+++TI/-Tmp-/RackMultipart20100503-45012-w937op-0>}, "authenticity_token"=>"uDfchywHWuoD0HTjMAp1q413mCB3d6Tu+mmXBRRqWF0="}
 Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-03 16:20:40) [GET]
+
+ActionController::RoutingError (No route matches "/public/data" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UploadController#index (for 127.0.0.1 at 2010-05-03 16:20:47) [GET]
+Rendering app/views/upload/uploadfile.rhtml
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/upload]
+
+
+Processing UploadController#index (for 85.224.109.21 at 2010-05-03 16:27:59) [GET]
+Rendering app/views/upload/uploadfile.rhtml
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://sked.dyndns.org/upload/]
+
+
+Processing UploadController#uploadFile (for 85.224.109.21 at 2010-05-03 16:28:06) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:/var/folders/px/pxtqumI1FjeWyT2fS9-wYk+++TI/-Tmp-/RackMultipart20100503-45012-rouyqf-0>}, "authenticity_token"=>"1f2iJuPRlGO9+6L0UU1E0XyKdpE7wFQhiPHfoIv82pM="}
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://sked.dyndns.org/upload/uploadFile]
+
+
+Processing UploadController#index (for 85.224.109.21 at 2010-05-03 16:28:17) [GET]
+Rendering app/views/upload/uploadfile.rhtml
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://sked.dyndns.org/upload/]
+
+
+Processing UploadController#index (for 127.0.0.1 at 2010-05-06 14:51:43) [GET]
+Rendering app/views/upload/uploadfile.rhtml
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/upload]
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2010-05-06 14:52:16) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:/var/folders/px/pxtqumI1FjeWyT2fS9-wYk+++TI/-Tmp-/RackMultipart20100506-45012-18re8e3-0>}, "authenticity_token"=>"ipd3kmMOcmWzbP7SEjIBxDMUE2PUa/T2fE8kjfMwME8="}
+  [4;36;1mImage Create (15.8ms)[0m   [0;1mINSERT INTO "images" ("created_at", "slide_id", "title", "author", "updated_at", "path") VALUES('2010-05-06 12:52:17', 1, 'Erik äger.', 'Erik', '2010-05-06 12:52:17', 7371)[0m
+
+NoMethodError (undefined method `rednder' for #<UploadController:0x1042957e8>):
+  app/controllers/upload_controller.rb:14:in `uploadFile'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2010-05-06 14:52:42) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:/var/folders/px/pxtqumI1FjeWyT2fS9-wYk+++TI/-Tmp-/RackMultipart20100506-45012-1wb9b9m-0>}, "authenticity_token"=>"ipd3kmMOcmWzbP7SEjIBxDMUE2PUa/T2fE8kjfMwME8="}
+  [4;35;1mImage Create (0.3ms)[0m   [0mINSERT INTO "images" ("created_at", "slide_id", "title", "author", "updated_at", "path") VALUES('2010-05-06 12:52:42', 1, 'Erik äger.', 'Erik', '2010-05-06 12:52:42', 7371)[0m
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+  app/controllers/upload_controller.rb:14:in `uploadFile'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2010-05-06 14:53:10) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:/var/folders/px/pxtqumI1FjeWyT2fS9-wYk+++TI/-Tmp-/RackMultipart20100506-45012-1186geh-0>}, "authenticity_token"=>"ipd3kmMOcmWzbP7SEjIBxDMUE2PUa/T2fE8kjfMwME8="}
+  [4;36;1mImage Create (0.3ms)[0m   [0;1mINSERT INTO "images" ("created_at", "slide_id", "title", "author", "updated_at", "path") VALUES('2010-05-06 12:53:10', 1, 'Erik äger.', 'Erik', '2010-05-06 12:53:10', 7371)[0m
+Completed in 12ms (View: 1, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2010-05-06 14:56:48) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:/var/folders/px/pxtqumI1FjeWyT2fS9-wYk+++TI/-Tmp-/RackMultipart20100506-45012-1x1qxj2-0>}, "authenticity_token"=>"ipd3kmMOcmWzbP7SEjIBxDMUE2PUa/T2fE8kjfMwME8="}
+  [4;35;1mImage Create (0.3ms)[0m   [0mINSERT INTO "images" ("created_at", "slide_id", "title", "author", "updated_at", "path") VALUES('2010-05-06 12:56:48', 1, 'Erik äger.', 'Erik', '2010-05-06 12:56:48', 7371)[0m
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+  app/controllers/upload_controller.rb:17:in `uploadFile'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (96.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2010-05-06 14:57:29) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:/var/folders/px/pxtqumI1FjeWyT2fS9-wYk+++TI/-Tmp-/RackMultipart20100506-45012-2gocer-0>}, "authenticity_token"=>"ipd3kmMOcmWzbP7SEjIBxDMUE2PUa/T2fE8kjfMwME8="}
+  [4;36;1mImage Create (0.3ms)[0m   [0;1mINSERT INTO "images" ("created_at", "slide_id", "title", "author", "updated_at", "path") VALUES('2010-05-06 12:57:29', 1, 'Erik äger.', 'Erik', '2010-05-06 12:57:29', 7371)[0m
+Completed in 17ms (View: 1, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2010-05-06 15:05:57) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:/var/folders/px/pxtqumI1FjeWyT2fS9-wYk+++TI/-Tmp-/RackMultipart20100506-45012-lzj22c-0>}, "authenticity_token"=>"ipd3kmMOcmWzbP7SEjIBxDMUE2PUa/T2fE8kjfMwME8="}
+  [4;35;1mImage Create (0.3ms)[0m   [0mINSERT INTO "images" ("created_at", "slide_id", "title", "author", "updated_at", "path") VALUES('2010-05-06 13:05:57', 1, 'Erik äger.', 'Erik', '2010-05-06 13:05:57', 7371)[0m
+Completed in 17ms (View: 1, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2010-05-06 15:09:42) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:/var/folders/px/pxtqumI1FjeWyT2fS9-wYk+++TI/-Tmp-/RackMultipart20100506-45012-b11jo5-0>}, "authenticity_token"=>"ipd3kmMOcmWzbP7SEjIBxDMUE2PUa/T2fE8kjfMwME8="}
+
+ArgumentError (wrong number of arguments (2 for 1)):
+  app/controllers/upload_controller.rb:6:in `[]'
+  app/controllers/upload_controller.rb:6:in `uploadFile'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (91.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2010-05-06 15:14:53) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:/var/folders/px/pxtqumI1FjeWyT2fS9-wYk+++TI/-Tmp-/RackMultipart20100506-45012-5q83fs-0>}, "authenticity_token"=>"ipd3kmMOcmWzbP7SEjIBxDMUE2PUa/T2fE8kjfMwME8="}
+  [4;36;1mImage Create (0.3ms)[0m   [0;1mINSERT INTO "images" ("created_at", "slide_id", "title", "author", "updated_at", "path") VALUES('2010-05-06 13:14:53', 1, 'Erik äger.', 'Erik', '2010-05-06 13:14:53', 7371)[0m
+Completed in 17ms (View: 1, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+
+
+Processing SlidesController#index (for 127.0.0.1 at 2010-05-06 15:16:29) [GET]
+  [4;35;1mSlide Load (0.5ms)[0m   [0mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+
+ActionView::TemplateError (undefined local variable or method `new_slide_path' for #<ActionView::Base:0x104256070>) on line #22 of app/views/slides/index.html.erb:
+19: 
+20: <br />
+21: 
+22: <%= link_to 'New slide', new_slide_path %>
+
+    app/views/slides/index.html.erb:22
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (103.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 15:16:32) [GET]
+
+ActionController::RoutingError (No route matches "/slide" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SlidesController#index (for 127.0.0.1 at 2010-05-06 15:16:35) [GET]
+  [4;36;1mSlide Load (0.5ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+
+ActionView::TemplateError (undefined local variable or method `new_slide_path' for #<ActionView::Base:0x104268338>) on line #22 of app/views/slides/index.html.erb:
+19: 
+20: <br />
+21: 
+22: <%= link_to 'New slide', new_slide_path %>
+
+    app/views/slides/index.html.erb:22
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (106.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 127.0.0.1 at 2010-05-06 15:17:12) [GET]
+  [4;35;1mSlide Load (0.5ms)[0m   [0mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/slides]
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:17:40) [GET]
+  [4;36;1mSlide Load (0.5ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:17:43) [GET]
+  [4;35;1mSlide Load (0.5ms)[0m   [0mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing SlidesController#index (for 85.224.109.21 at 2010-05-06 15:17:45) [GET]
+  [4;36;1mSlide Load (0.5ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:17:51) [GET]
+  [4;35;1mSlide Load (0.5ms)[0m   [0mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing SlidesController#index (for 85.224.109.21 at 2010-05-06 15:20:31) [GET]
+  [4;36;1mSlide Load (0.5ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing UploadController#index (for 85.24.223.62 at 2010-05-06 15:21:24) [GET]
+Rendering app/views/upload/uploadfile.rhtml
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://sked.dyndns.org/upload/index]
+
+
+Processing UploadController#uploadFile (for 85.24.223.62 at 2010-05-06 15:21:29) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:/var/folders/px/pxtqumI1FjeWyT2fS9-wYk+++TI/-Tmp-/RackMultipart20100506-45012-1uk8kwe-0>}, "authenticity_token"=>"yPfvHXDWReDIB7UHTAhmzYdUPeQkqr9Miz/VTD598dc="}
+  [4;35;1mSlide Create (0.3ms)[0m   [0mINSERT INTO "slides" ("slideshow_id", "created_at", "title", "body", "updated_at") VALUES(NULL, '2010-05-06 13:21:29', 'Pew', 'Per äger', '2010-05-06 13:21:29')[0m
+  [4;36;1mImage Create (0.3ms)[0m   [0;1mINSERT INTO "images" ("created_at", "slide_id", "title", "author", "updated_at", "path") VALUES('2010-05-06 13:21:29', 1, 'Erik äger.', 'Erik', '2010-05-06 13:21:29', 7371)[0m
+Completed in 20ms (View: 1, DB: 1) | 200 OK [http://sked.dyndns.org/upload/uploadFile]
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:21:40) [GET]
+  [4;35;1mSlide Load (0.6ms)[0m   [0mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+
+ActionView::TemplateError (undefined method `slide_path' for #<ActionView::Base:0x1040f67c0>) on line #13 of app/views/slides/index.html.erb:
+10:   <tr>
+11:     <td><%=h slide.title %></td>
+12:     <td><%=h slide.body %></td>
+13:     <td><%= link_to 'Show', slide %></td>
+14:     <td><%= link_to 'Edit', edit_slide_path(slide) %></td>
+15:     <td><%= link_to 'Destroy', slide, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/slides/index.html.erb:13
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 85.224.109.21 at 2010-05-06 15:22:39) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+
+ActionView::TemplateError (undefined method `slide_path' for #<ActionView::Base:0x1041aced0>) on line #13 of app/views/slides/index.html.erb:
+10:   <tr>
+11:     <td><%=h slide.title %></td>
+12:     <td><%=h slide.body %></td>
+13:     <td><%= link_to 'Show', slide %></td>
+14:     <td><%= link_to 'Edit', edit_slide_path(slide) %></td>
+15:     <td><%= link_to 'Destroy', slide, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/slides/index.html.erb:13
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (116.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:23:15) [GET]
+  [4;35;1mSlide Load (0.6ms)[0m   [0mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+
+ActionView::TemplateError (undefined method `slide_path' for #<ActionView::Base:0x10431bca8>) on line #13 of app/views/slides/index.html.erb:
+10:   <tr>
+11:     <td><%=h slide.title %></td>
+12:     <td><%=h slide.body %></td>
+13:     <td><%= link_to 'Show', slide %></td>
+14:     <!-- ><td><%= link_to 'Edit', edit_slide_path(slide) %></td> -->
+15:     <td><%= link_to 'Destroy', slide, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/slides/index.html.erb:13
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (110.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:23:25) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+
+ActionView::TemplateError (undefined method `slide_path' for #<ActionView::Base:0x10441e150>) on line #13 of app/views/slides/index.html.erb:
+10:   <tr>
+11:     <td><%=h slide.title %></td>
+12:     <td><%=h slide.body %></td>
+13:     <td><%= link_to 'Show', slide %></td>
+14:     <!-- <td><%= link_to 'Edit', edit_slide_path(slide) %></td> -->
+15:     <td><%= link_to 'Destroy', slide, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/slides/index.html.erb:13
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:27:34) [GET]
+  [4;35;1mSlide Load (0.6ms)[0m   [0mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing SlidesController#index (for 85.224.109.21 at 2010-05-06 15:27:45) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing SlidesController#show (for 85.24.223.62 at 2010-05-06 15:28:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlide Load (0.2ms)[0m   [0mSELECT * FROM "slides" WHERE ("slides"."id" = 1) [0m
+Rendering template within layouts/slides
+Rendering slides/show
+Completed in 68ms (View: 62, DB: 0) | 200 OK [http://sked.dyndns.org/slides/1]
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:28:51) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing SlidesController#edit (for 85.24.223.62 at 2010-05-06 15:28:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlide Load (0.2ms)[0m   [0mSELECT * FROM "slides" WHERE ("slides"."id" = 1) [0m
+Rendering template within layouts/slides
+Rendering slides/edit
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://sked.dyndns.org/slides/1/edit]
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:34:25) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+
+ActionView::TemplateError (undefined local variable or method `slideimage' for #<ActionView::Base:0x10416be58>) on line #11 of app/views/slides/index.html.erb:
+8: 
+9: <% @slides.each do |slide| %>
+10:   <tr>
+11: 	<img src= "<% slideimage.path %>">
+12:     <td><%=h slide.title %></td>
+13:     <td><%=h slide.body %></td>
+14:     <td><%= link_to 'Show', slide %></td>
+
+    app/views/slides/index.html.erb:11
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (104.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:34:31) [GET]
+  [4;35;1mSlide Load (0.6ms)[0m   [0mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+
+ActionView::TemplateError (undefined method `image' for #<Slide:0x104253690>) on line #11 of app/views/slides/index.html.erb:
+8: 
+9: <% @slides.each do |slide| %>
+10:   <tr>
+11: 	<img src= "<% slide.image.path %>">
+12:     <td><%=h slide.title %></td>
+13:     <td><%=h slide.body %></td>
+14:     <td><%= link_to 'Show', slide %></td>
+
+    app/views/slides/index.html.erb:11
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:35:39) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+
+ActionView::TemplateError (undefined method `image' for nil:NilClass) on line #11 of app/views/slides/index.html.erb:
+8: 
+9: <% @slides.each do |slide| %>
+10:   <tr>
+11: 	<img src= "<% @slide.image.path %>">
+12:     <td><%=h slide.title %></td>
+13:     <td><%=h slide.body %></td>
+14:     <td><%= link_to 'Show', slide %></td>
+
+    app/views/slides/index.html.erb:11
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:35:43) [GET]
+  [4;35;1mSlide Load (0.6ms)[0m   [0mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+
+ActionView::TemplateError (undefined method `image' for #<Slide:0x103ff28b0>) on line #11 of app/views/slides/index.html.erb:
+8: 
+9: <% @slides.each do |slide| %>
+10:   <tr>
+11: 	<img src= "<% slide.image.path %>">
+12:     <td><%=h slide.title %></td>
+13:     <td><%=h slide.body %></td>
+14:     <td><%= link_to 'Show', slide %></td>
+
+    app/views/slides/index.html.erb:11
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 85.224.109.21 at 2010-05-06 15:36:12) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+
+ActionView::TemplateError (undefined method `image' for #<Slide:0x1041831e8>) on line #11 of app/views/slides/index.html.erb:
+8: 
+9: <% @slides.each do |slide| %>
+10:   <tr>
+11: 	<img src= "<% slide.image.path %>">
+12:     <td><%=h slide.title %></td>
+13:     <td><%=h slide.body %></td>
+14:     <td><%= link_to 'Show', slide %></td>
+
+    app/views/slides/index.html.erb:11
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (108.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:36:21) [GET]
+  [4;35;1mSlide Load (0.6ms)[0m   [0mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+
+ActionView::TemplateError (undefined method `image' for #<Slide:0x1042ea6a8>) on line #11 of app/views/slides/index.html.erb:
+8: 
+9: <% @slides.each do |slide| %>
+10:   <tr>
+11: 	<img src= "<% slide.image.path %>" style="height:100px; width:150px;">
+12:     <td><%=h slide.title %></td>
+13:     <td><%=h slide.body %></td>
+14:     <td><%= link_to 'Show', slide %></td>
+
+    app/views/slides/index.html.erb:11
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:36:41) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ActionView::TemplateError (undefined method `path' for #<Class:0x104492460>) on line #11 of app/views/slides/index.html.erb:
+8: 
+9: <% @slides.each do |slide| %>
+10:   <tr>
+11: 	<img src= "<% slide.images.path %>" style="height:100px; width:150px;">
+12:     <td><%=h slide.title %></td>
+13:     <td><%=h slide.body %></td>
+14:     <td><%= link_to 'Show', slide %></td>
+
+    app/views/slides/index.html.erb:11
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:36:44) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ActionView::TemplateError (undefined method `path' for #<Class:0x103ffca40>) on line #11 of app/views/slides/index.html.erb:
+8: 
+9: <% @slides.each do |slide| %>
+10:   <tr>
+11: 	<img src= "<% slide.images.path %>" style="height:100px; width:150px;">
+12:     <td><%=h slide.title %></td>
+13:     <td><%=h slide.body %></td>
+14:     <td><%= link_to 'Show', slide %></td>
+
+    app/views/slides/index.html.erb:11
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:38:06) [GET]
+  [4;36;1mSlide Load (0.7ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+Completed in 233ms (View: 15, DB: 1) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:38:07) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+Completed in 81ms (View: 75, DB: 1) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:38:37) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:38:37) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:39:00) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing ApplicationController#index (for 85.24.223.62 at 2010-05-06 15:39:00) [GET]
+
+ActionController::RoutingError (No route matches "/7371" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SlidesController#index (for 85.224.109.21 at 2010-05-06 15:39:02) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing ApplicationController#index (for 85.224.109.21 at 2010-05-06 15:39:03) [GET]
+
+ActionController::RoutingError (No route matches "/7371" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:39:05) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:39:05) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+Completed in 77ms (View: 10, DB: 1) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:39:24) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:39:24) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mImage Load (0.2ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-06 15:40:14) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mImage Load (0.2ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing ApplicationController#index (for 85.24.223.62 at 2010-05-06 15:40:14) [GET]
+
+ActionController::RoutingError (No route matches "/7371" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SlidesController#index (for 85.224.109.21 at 2010-05-06 15:42:11) [GET]
+  [4;36;1mSlide Load (0.6ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mImage Load (0.2ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://sked.dyndns.org/slides]
+
+
+Processing ApplicationController#index (for 85.224.109.21 at 2010-05-06 15:42:11) [GET]
+
+ActionController::RoutingError (No route matches "/7371" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UploadController#uploadFile (for 85.24.223.62 at 2010-05-08 19:28:36) [GET]
+  [4;36;1mSlide Create (31.7ms)[0m   [0;1mINSERT INTO "slides" ("slideshow_id", "created_at", "title", "body", "updated_at") VALUES(NULL, '2010-05-08 17:28:36', 'Pew', 'Per äger', '2010-05-08 17:28:36')[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/models/data_file.rb:3:in `save'
+  app/controllers/upload_controller.rb:10:in `uploadFile'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.0ms)
+Rendered rescues/_request_and_response (38.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-08 19:28:37) [GET]
+  [4;35;1mSlide Load (1.2ms)[0m   [0mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+  [4;35;1mImage Load (0.2ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 2) LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `path' for nil:NilClass) on line #11 of app/views/slides/index.html.erb:
+8: 
+9: <% @slides.each do |slide| %>
+10:   <tr>
+11: 	<img src= "<%= slide.image.path %>">
+12:     <td><%=h slide.title %></td>
+13:     <td><%=h slide.body %></td>
+14:     <td><%= link_to 'Show', slide %></td>
+
+    app/views/slides/index.html.erb:11
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UploadController#index (for 85.24.223.62 at 2010-05-08 19:33:47) [GET]
+Rendering app/views/upload/uploadfile.rhtml
+Completed in 35ms (View: 31, DB: 0) | 200 OK [http://sked.dyndns.org/upload/]
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-08 19:33:55) [GET]
+  [4;36;1mSlide Load (0.7ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+  [4;36;1mImage Load (0.2ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".slide_id = 2) LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `path' for nil:NilClass) on line #11 of app/views/slides/index.html.erb:
+8: 
+9: <% @slides.each do |slide| %>
+10:   <tr>
+11: 	<img src= "<%= slide.image.path %>">
+12:     <td><%=h slide.title %></td>
+13:     <td><%=h slide.body %></td>
+14:     <td><%= link_to 'Show', slide %></td>
+
+    app/views/slides/index.html.erb:11
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 85.24.223.62 at 2010-05-08 19:33:58) [GET]
+
+ActionController::RoutingError (No route matches "/slide" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-08 19:34:01) [GET]
+  [4;35;1mSlide Load (0.7ms)[0m   [0mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+  [4;35;1mImage Load (0.2ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 2) LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `path' for nil:NilClass) on line #11 of app/views/slides/index.html.erb:
+8: 
+9: <% @slides.each do |slide| %>
+10:   <tr>
+11: 	<img src= "<%= slide.image.path %>">
+12:     <td><%=h slide.title %></td>
+13:     <td><%=h slide.body %></td>
+14:     <td><%= link_to 'Show', slide %></td>
+
+    app/views/slides/index.html.erb:11
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (107.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-09 13:46:09) [GET]
+  [4;36;1mSlide Load (18.5ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+  [4;36;1mImage Load (0.2ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".slide_id = 2) LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `path' for nil:NilClass) on line #11 of app/views/slides/index.html.erb:
+8: 
+9: <% @slides.each do |slide| %>
+10:   <tr>
+11: 	<img src= "<%= slide.image.path %>">
+12:     <td><%=h slide.title %></td>
+13:     <td><%=h slide.body %></td>
+14:     <td><%= link_to 'Show', slide %></td>
+
+    app/views/slides/index.html.erb:11
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (107.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-11 19:42:33) [GET]
+  [4;35;1mSlide Load (41.7ms)[0m   [0mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+  [4;35;1mImage Load (0.2ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 2) LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `path' for nil:NilClass) on line #11 of app/views/slides/index.html.erb:
+8: 
+9: <% @slides.each do |slide| %>
+10:   <tr>
+11: 	<img src= "<%= slide.image.path %>">
+12:     <td><%=h slide.title %></td>
+13:     <td><%=h slide.body %></td>
+14:     <td><%= link_to 'Show', slide %></td>
+
+    app/views/slides/index.html.erb:11
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UploadController#index (for 85.24.223.62 at 2010-05-11 19:42:33) [GET]
+Rendering app/views/upload/uploadfile.rhtml
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://sked.dyndns.org/upload/]
+
+
+Processing UploadController#index (for 85.24.223.62 at 2010-05-11 19:54:23) [GET]
+Rendering app/views/upload/uploadfile.rhtml
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://sked.dyndns.org/upload/]
+
+
+Processing SlidesController#index (for 85.24.223.62 at 2010-05-11 19:54:30) [GET]
+  [4;36;1mSlide Load (0.7ms)[0m   [0;1mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+  [4;36;1mImage Load (0.2ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".slide_id = 2) LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `path' for nil:NilClass) on line #11 of app/views/slides/index.html.erb:
+8: 
+9: <% @slides.each do |slide| %>
+10:   <tr>
+11: 	<img src= "<%= slide.image.path %>">
+12:     <td><%=h slide.title %></td>
+13:     <td><%=h slide.body %></td>
+14:     <td><%= link_to 'Show', slide %></td>
+
+    app/views/slides/index.html.erb:11
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SlidesController#index (for 85.224.109.21 at 2010-05-12 21:44:42) [GET]
+  [4;35;1mSlide Load (22.6ms)[0m   [0mSELECT * FROM "slides" [0m
+Rendering template within layouts/slides
+Rendering slides/index
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".slide_id = 1) LIMIT 1[0m
+  [4;35;1mImage Load (0.2ms)[0m   [0mSELECT * FROM "images" WHERE ("images".slide_id = 2) LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `path' for nil:NilClass) on line #11 of app/views/slides/index.html.erb:
+8: 
+9: <% @slides.each do |slide| %>
+10:   <tr>
+11: 	<img src= "<%= slide.image.path %>">
+12:     <td><%=h slide.title %></td>
+13:     <td><%=h slide.body %></td>
+14:     <td><%= link_to 'Show', slide %></td>
+
+    app/views/slides/index.html.erb:11
+    app/views/slides/index.html.erb:9:in `each'
+    app/views/slides/index.html.erb:9
+    app/controllers/slides_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)

@@ -3,6 +3,10 @@ class UploadController < ApplicationController
      render :file => 'app/views/upload/uploadfile.rhtml'
   end
   def uploadFile
+    slide = Slide.new
+    slide.body = "Per äger"
+    slide.title = "Pew"
+    slide.save
     path = DataFile.save(params[:upload])
     image = Image.new
     image.path = path
@@ -10,6 +14,8 @@ class UploadController < ApplicationController
     image.author = "Erik"
     image.slide_id = 1
     image.save
-    render :text => "File has been uploaded successfully"
+
+    # render :text => "File has been uploaded successfully"
+    render :text => params.to_s
   end
 end

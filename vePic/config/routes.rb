@@ -1,14 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :slideshows do |slideshows|
-   slideshows.resources :slides do |slides|
-     slides.resources :highlights
-     slides.resources :images
-   end
-  end
+  map.resources :slideshows
   
   map.connect 'upload', :controller => 'upload', :action => 'index'
   map.connect 'upload/uploadFile', :controller => 'upload', :action => 'uploadFile'
+  map.resources :slides
   
   map.resources :groups
 
