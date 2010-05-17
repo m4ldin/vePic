@@ -14,7 +14,7 @@
     <td><%=h image.path %></td>
     <td><%=h image.title %></td>
     <td><%=h image.author %></td>
-    <td><%= link_to 'Show', image %></td>
+    <td><%= link_to 'Show', image_path(image) %></td>
     <td><%= link_to 'Edit', edit_image_path(image) %></td>
     <td><%= link_to 'Destroy', image, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

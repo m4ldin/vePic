@@ -1,8 +1,12 @@
 <h1>New slide</h1>
 
 <% form_for(@slide) do |f| %>
+  <%= hidden_field_tag(:image_id, @image.id) %>
   <%= f.error_messages %>
 
+  <p>
+    <%= image_tag "/thumb/" << File.basename(@image.path) << "?w=500&h=500" %>
+  </p>
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>

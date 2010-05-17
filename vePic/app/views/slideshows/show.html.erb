@@ -1,11 +1,102 @@
-<p>
-  <b>Title:</b>
-  <%=h @slideshow.title %>
-</p>
+<h1>View slideshow</h1>
+
+<div id="slideshow" width="100%", height="100%">
+
+</div>
 
 <script type="text/javascript">
-var slideshow = <%= serializeSlideshow(@slideshow) %>;
-</script>
+Slideshow = function(data, dom)
+{
+  this._data = data;
+  this._domElement = document.createElement("div");
+  titleElement = document.createElement("h2");
+  this._titleElement = document.createTextNode();
+  this._imageElement = document.createElement("img");
+  bodyElement = document.createElement("span");
+  this._bodyElement = document.createTextNode();
+  
+  this._controls = document.createElement("div");
+  
+  titleElement.appendChild(this._titleElement);
+  bodyElement.appendChild(this._bodyElement);
+  this._domElement.appendChild(titleElement);
+  this._domElement.appendChild(this._imageElement);
+  this._domElement.appendChild(this._controls);
+  this._domElement.appendChild(bodyElement);
+  
+  this._createPreviousButton();
+  this._createNextButton();
+  
+  dom.appendChild(this._domElement);
+  
+};
 
-<%= link_to 'Edit', edit_slideshow_path(@slideshow) %> |
-<%= link_to 'Back', slideshows_path %>
+Slideshow.prototype._createNextButton = function()
+{
+  this._nextButton = document.createElement("input");
+  this._nextButton.setAttribute("type", "submit");
+  this._nextButton.setAttribute("value", "Next slide");
+  
+  self = this;
+  
+  this._nextButton.addEventListener('click',function () {
+	self.next();
+  },false);
+  
+  this._controls.appendChild(this._nextButton);
+};
+
+Slideshow.prototype._createPreviousButton = function()
+{
+  this._nextButton = document.createElement("input");
+  this._nextButton.setAttribute("type", "submit");
+  this._nextButton.setAttribute("value", "Previous slide");
+  
+  self = this;
+  
+  this._nextButton.addEventListener('click',function () {
+	self.previous();
+  },false);
+  
+  this._controls.appendChild(this._nextButton);
+};
+
+Slideshow.prototype.start = function()
+{
+  this._currentSlideIndex = 0;
+  this._currentSlide = this._data['slides'][this._currentSlideIndex];
+  this.render();
+};
+
+Slideshow.prototype.render = function()
+{
+  this._imageElement.setAttribute("src", "/thumb/" + this._currentSlide['image']['path']);
+  this._titleElement.data = this._currentSlide['title'] + " (" + (this._currentSlideIndex + 1) + "/" + this._data['slides'].length + ")";
+  this._bodyElement.data = this._currentSlide['body'];
+};
+
+Slideshow.prototype.next = function()
+{
+  if (this._currentSlideIndex < this._data['slides'].length - 1)
+  {
+    this._currentSlideIndex++;
+    this._currentSlide = this._data['slides'][this._currentSlideIndex];
+    this.render();
+  }
+};
+
+Slideshow.prototype.previous = function()
+{
+  if (this._currentSlideIndex > 0)
+  {
+    this._currentSlideIndex--;
+    this._currentSlide = this._data['slides'][this._currentSlideIndex];
+    this.render();
+  }
+};
+
+var data = <%= @slideshow_text %>,
+    dom = document.getElementById("slideshow"),
+    slideshow = new Slideshow(data, dom);
+slideshow.start();
+</script>

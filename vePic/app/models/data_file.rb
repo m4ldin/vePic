@@ -6,5 +6,6 @@ class DataFile < ActiveRecord::Base
     path = File.join(directory, name)
     # write the file
     File.open(path, "wb") { |f| f.write(upload['datafile'].read) }
+    path
   end
 end

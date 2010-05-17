@@ -25,6 +25,7 @@ class SlidesController < ApplicationController
   # GET /slides/new.xml
   def new
     @slide = Slide.new
+    @image = Image.find params['image']
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +42,7 @@ class SlidesController < ApplicationController
   # POST /slides.xml
   def create
     @slide = Slide.new(params[:slide])
+    @slide.image = Image.find params[:image_id]
 
     respond_to do |format|
       if @slide.save

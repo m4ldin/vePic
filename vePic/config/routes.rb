@@ -9,8 +9,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :groups
 
   map.resources :users
+  
+  map.resources :images
 
   map.resources :topics, :has_many => :posts
+  
+  map.connect "thumb/*specs", :controller => "thumb", :action => "index"
 
   # The priority is based upon order of creation: first created -> highest priority.
 

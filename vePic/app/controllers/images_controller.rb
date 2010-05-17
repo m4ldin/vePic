@@ -14,9 +14,11 @@ class ImagesController < ApplicationController
   # GET /images/1.xml
   def show
     @image = Image.find(params[:id])
+    data = nil
+    File.open(@image.path) {|f| data = f.read }
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { send_data data, :filename => File.basename(@image.path), :type => 'image/jpeg', :disposition => 'inline' }
       format.xml  { render :xml => @image }
     end
   end

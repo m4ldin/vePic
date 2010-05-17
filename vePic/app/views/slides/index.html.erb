@@ -4,13 +4,20 @@
   <tr>
     <th>Title</th>
     <th>Body</th>
+    <th>Image</th>
   </tr>
 
 <% @slides.each do |slide| %>
   <tr>
-	<img src= "<%= slide.image.path %>">
     <td><%=h slide.title %></td>
     <td><%=h slide.body %></td>
+    <td>
+	<%= if slide.image != nil
+        image_tag "/thumb/" << File.basename(slide.image.path) << "?w=120&h=120"
+    else
+        ""
+    end %>
+    </td>
     <td><%= link_to 'Show', slide %></td>
     <td><%= link_to 'Edit', edit_slide_path(slide) %></td>
     <td><%= link_to 'Destroy', slide, :confirm => 'Are you sure?', :method => :delete %></td>

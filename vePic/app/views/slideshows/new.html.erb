@@ -1,15 +1,25 @@
 <h1>New slideshow</h1>
 
-<% form_for(@slideshow) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
+<table>
+<tr><th>Slide</th><th>Image</th><th>Action</th></tr>
+<% Slide.all.each do |slide| %>
+<tr>
+<td>
+<%= slide.title %>
+</td>
+<td>
+<%= image_tag "/thumb/" << File.basename(slide.image.path) << "?w=120&h=120" %>
+</td>
+<td>
+  <% form_for(@slideshow) do |f| %>
+    <%= hidden_field_tag(:slide_pick, slide.id) %>
+    <%= f.submit 'Add slide' %>
+  <% end %>
+</td>
+</tr>
 <% end %>
+</table>
+
+
 
 <%= link_to 'Back', slideshows_path %>

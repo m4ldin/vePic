@@ -5,14 +5,20 @@
     <th>Title</th>
   </tr>
 
-<% @slideshows.each do |slideshow| %>
-  <tr>
-    <td><%=h slideshow.title %></td>
+<% @slideshows.each_with_index do |slideshow, index| %>
+    <tr>
+    <td><% slideshow.sequence.split(",").each do |sequence|
+slide = Slide.find(sequence.to_i) %>
+        <%= image_tag "/thumb/" << File.basename(slide.image.path) << "?w=120&h=120" %>
+    <% end %></td>
     <td><%= link_to 'Show', slideshow %></td>
     <td><%= link_to 'Edit', edit_slideshow_path(slideshow) %></td>
     <td><%= link_to 'Destroy', slideshow, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    
+    </tr>
+  
 <% end %>
+  
 </table>
 
 <br />

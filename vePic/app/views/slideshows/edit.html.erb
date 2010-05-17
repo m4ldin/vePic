@@ -1,16 +1,60 @@
-<h1>Editing slideshow</h1>
+<h1>New slideshow</h1>
 
-<% form_for(@slideshow) do |f| %>
-  <%= f.error_messages %>
+<table>
+<h2>Current slides</h2>
+<tr><th>Slide</th><th>Image</th><th>Action</th></tr>
+<% @slideshow.sequence.split(",").each do |sequence|
+slide = Slide.find(sequence.to_i) %>
 
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
+<tr>
+<td>
+<%= slide.title %>
+</td>
+<td>
+<%= image_tag "/thumb/" << File.basename(slide.image.path) << "?w=120&h=120" %>
+</td>
+<td>
+  <%%>
+  <% form_for(@slideshow) do |f| %>
+    <%= hidden_field_tag(:slide_remove, slide.id) %>
+    <%= f.submit 'Remove slide' %>
+  <% end %>
+  <% form_for(@slideshow) do |f| %>
+    <%= hidden_field_tag(:slide_up, slide.id) %>
+    <%= f.submit 'Move up' %>
+  <% end %>
+  <% form_for(@slideshow) do |f| %>
+    <%= hidden_field_tag(:slide_down, slide.id) %>
+    <%= f.submit 'Move down' %>
+  <% end %>
+</td>
+</tr>
+
 <% end %>
+</table>
 
-<%= link_to 'Show', @slideshow %> |
+<h2>Available slides</h2>
+
+<table>
+<tr><th>Slide</th><th>Image</th><th>Action</th></tr>
+<% Slide.all.select{|slide|not @slideshow.slides.include?(slide)}.each do |slide| %>
+<tr>
+<td>
+<%= slide.title %>
+</td>
+<td>
+<%= image_tag "/thumb/" << File.basename(slide.image.path) << "?w=120&h=120" %>
+</td>
+<td>
+  <% form_for(@slideshow) do |f| %>
+    <%= hidden_field_tag(:slide_pick, slide.id) %>
+    <%= f.submit 'Add slide' %>
+  <% end %>
+</td>
+</tr>
+<% end %>
+</table>
+
+
+
 <%= link_to 'Back', slideshows_path %>
